@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: top;
+            margin: 0;
+            translate: 75px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .container input, .container button {
+            margin: 20px 0;
+            padding: 10px;
+            width: 200px;
+        }
+        .container select {
+            margin: -10px 0;
+            padding: 10px;
+            width: 220px;
+        }
+        .container p{
+            font-size: 20px;
+            margin: 15px 0;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 20px;
+            translate: 0px 75px;
+        }
+        .buttons button {
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 20px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Temprature Unit Converter</h1>
+            <input type="number" id="value_" placeholder="Value to convert">
+            <select id="from_" style="font-size: 20px; padding: 8px; width: 220px;">
+                <option value="celsius">celsius</option>
+                <option value="fahrenheit">fahrenheit</option>
+                <option value="kelvin">kelvin</option>
+            </select>
+            <p style="font-size: 20px">to</p>
+            <select id="to_" style="font-size: 20px; padding: 8px; width: 220px;">
+                <option value="celsius">celsius</option>
+                <option value="fahrenheit">fahrenheit</option>
+                <option value="kelvin">kelvin</option>
+            </select>
+            <button onclick="convert('temprature');">Convert</button>
+            <p id="result"></p>
+            <script src="script.js"></script>
+        </div>
+        <div class="buttons">
+            <button onclick="window.location.href='weight.html';">Weight</button>
+            <button onclick="window.location.href='lenght.html';">Lenght</button>
+            <button onclick="window.location.href='temprature.html';">Temprature</button>
+        </div>
+    </div>
+</body>
+</html>
